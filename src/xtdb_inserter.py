@@ -1,3 +1,13 @@
+# ************************************************************************
+# Author           : Suresh Nageswaran suresh@griddynamics.com
+# File Name        : xtdb_inserter.py
+# Description      : Reads the JSON files for trades & counterparties
+# Connects to XTDB and inserts.
+#
+# Revision History :
+# Date            Author            Comments
+# 
+# ************************************************************************
 # xtdb_inserter.py
 
 import os
