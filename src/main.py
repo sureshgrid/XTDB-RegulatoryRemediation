@@ -1,15 +1,21 @@
-"""
-Main execution module for XTDB synthetic data generation and analysis.
-
-This module orchestrates the entire process of:
-1. Generating synthetic trading data with realistic patterns
-2. Creating market manipulation scenarios
-3. Inserting data into XTDB with proper bitemporal tracking
-4. Executing temporal analysis queries
-
-The module uses asynchronous operations for database interactions while
-maintaining proper error handling and resource management.
-"""
+# ************************************************************************
+# Author           : Suresh Nageswaran suresh@griddynamics.com
+# File Name        : main.py
+# Description      : 
+# Main execution module for XTDB synthetic data generation and analysis.
+# This module orchestrates the entire process of:
+#  1. Generating synthetic trading data with realistic patterns
+#  2. Creating market manipulation scenarios
+#  3. Inserting data into XTDB with proper bitemporal tracking
+#  4. Executing temporal analysis queries
+# The module uses asynchronous operations for database interactions while
+# maintaining proper error handling and resource management.
+# 
+# Revision History :
+# Date            Author            Comments
+# 
+# ************************************************************************
+# main.py
 
 import sys
 import asyncio
