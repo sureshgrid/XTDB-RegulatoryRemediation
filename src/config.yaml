@@ -1,0 +1,94 @@
+date_range:
+  start_date: "2025-02-01"
+  end_date: "2025-02-14"
+
+securities:
+  - ticker: "CSX"
+    base_price: 32.46
+    volatility: 0.02
+  - ticker: "QBTS"
+    base_price: 15.0
+    volatility: 0.03
+  - ticker: "PLTR"
+    base_price: 20.0
+    volatility: 0.035
+  - ticker: "BABA"
+    base_price: 100.0
+    volatility: 0.03
+  - ticker: "RIVN"
+    base_price: 12.65
+    volatility: 0.04
+  - ticker: "TSLL"
+    base_price: 20.17
+    volatility: 0.045
+  - ticker: "INTC"
+    base_price: 26.03
+    volatility: 0.025
+  - ticker: "NVDA"
+    base_price: 140.38
+    volatility: 0.03
+  - ticker: "NIO"
+    base_price: 4.47
+    volatility: 0.04
+  - ticker: "BBAI"
+    base_price: 7.70
+    volatility: 0.05
+  - ticker: "U"
+    base_price: 28.64
+    volatility: 0.035
+  - ticker: "FUBO"
+    base_price: 4.19
+    volatility: 0.045
+  - ticker: "AAPL"
+    base_price: 244.47
+    volatility: 0.02
+  - ticker: "MSFT"
+    base_price: 237.92
+    volatility: 0.02
+  - ticker: "GOOG"
+    base_price: 185.80
+    volatility: 0.025
+  - ticker: "AMZN"
+    base_price: 226.65
+    volatility: 0.03
+  - ticker: "AMD"
+    base_price: 114.28
+    volatility: 0.035
+  - ticker: "ASML"
+    base_price: 744.22
+    volatility: 0.03
+  - ticker: "ADBE"
+    base_price: 464.11
+    volatility: 0.025
+  - ticker: "COST"
+    base_price: 1056.03
+    volatility: 0.02
+
+generation:
+  trades_per_day: 200  # Upper limit, must be >= 11
+
+output:
+  trades_file: "trades_data.json"
+  counterparties_file: "counterparty_data.json"
+  sql_file: "temporal_analysis_queries.sql"
+
+execution_mode:
+  mode: "full"  # Options: "local_only" or "full"
+  # If present, only the number of test_mode records will be inserted in xtdb
+  test_mode: 0 # If this is absent, ALL records in trades/counterparties will be added
+  # Batch read and insert of JSON using streaming json library - memory efficiency 
+  batch_size: 500 # This controls how many JSON records are read in each time
+  
+
+# Database configuration (required only if execution_mode is "full")
+database:
+  host: "ubuntuserv24x02.lan"
+  port: 5432
+  dbname: "xtdb"
+  user: "xtdb"
+  password: "secret123"
+
+scenario_toggles:
+  layering: true
+  wash_trading: true
+  spoofing: true

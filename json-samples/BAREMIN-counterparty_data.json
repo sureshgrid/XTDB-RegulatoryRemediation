@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "CP001",
+        "type": "counterparty",
+        "executing_broker_id": "EXEC1",
+        "clearing_broker_id": "CLR1",
+        "clearing_account": "CA000001",
+        "correspondent_id": "CORR1",
+        "beneficial_owner_id": "BO000001",
+        "account_type": "I",
+        "account_category": "Proprietary",
+        "status": "active",
+        "risk_rating": "C",
+        "trading_limit": 1000000,
+        "_valid_from": "2025-02-11T00:00:00.000000Z",
+        "_valid_to": null,
+        "cp_update_sequence": 1,
+        "credit_status": "Approved",
+        "margin_requirement": 73,
+        "settlement_instructions": {
+            "default_currency": "USD",
+            "settlement_method": "FED",
+            "settlement_cycle": "T+2"
+        }
+    },
+    {
+        "_id": "CP002",
+        "type": "counterparty",
+        "executing_broker_id": "EXEC2",
+        "clearing_broker_id": "CLR2",
+        "clearing_account": "CA000002",
+        "correspondent_id": "CORR2",
+        "beneficial_owner_id": "BO000002",
+        "account_type": "R",
+        "account_category": "Market Maker",
+        "status": "active",
+        "risk_rating": "B",
+        "trading_limit": 2000000,
+        "_valid_from": "2025-02-11T00:00:00.000000Z",
+        "_valid_to": null,
+        "cp_update_sequence": 1,
+        "credit_status": "Restricted",
+        "margin_requirement": 32,
+        "settlement_instructions": {
+            "default_currency": "USD",
+            "settlement_method": "DTC",
+            "settlement_cycle": "T+2"
+        }
+    }
+]
